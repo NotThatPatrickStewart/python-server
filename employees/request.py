@@ -60,4 +60,4 @@ def delete_employee(id):
 
     # If the employee was found, use pop(int) to remove it from list
     if employee_index >= 0:
-        EMPLOYEES.pop(animal_index)
+        EMPLOYEES.pop(employee_index)
