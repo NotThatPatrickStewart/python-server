@@ -10,13 +10,13 @@ from customers import get_all_customers, get_single_customer, create_customer
 
 class HandleRequests(BaseHTTPRequestHandler):
 
-    def parse_url(self, path):
+    def parse_url(self, path): #need self when function is inside a class
         # Just like splitting a string in JavaScript. If the
-        # path is "/animals/1", the resulting list will
+        # path is "/animals/2", the resulting list will
         # have "" at index 0, "animals" at index 1, and "1"
         # at index 2.
-        path_params = path.split("/")
-        resource = path_params[1]
+        path_params = path.split("/") #split on /, create list: ['', 'animals', '2'] where 2 is the animal id
+        resource = path_params[1] #because of the empty string at index [0]
         id = None
 
         # Try to get the item at index 2
