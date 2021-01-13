@@ -5,7 +5,7 @@ ANIMALS = [
         "species": "Dog",
         "locationId": 1,
         "customerId": 4,
-    "status": "Admitted"
+        "status": "Admitted"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@ ANIMALS = [
         "species": "Dog",
         "locationId": 1,
         "customerId": 2,
-    "status": "Admitted"
+        "status": "Admitted"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@ ANIMALS = [
         "species": "Cat",
         "locationId": 2,
         "customerId": 1,
-    "status": "Admitted"
+        "status": "Admitted"
     }
 ]
 
