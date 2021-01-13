@@ -101,7 +101,7 @@ class HandleRequests(BaseHTTPRequestHandler):
         (resource, id) = self.parse_url(self.path)
 
         # Initialize new entry
-        new_entry = None
+        new_entry = None #consider a different name, new_entry is a little vague
 
         # Add a new entry to the list. Don't worry about
         # the orange squiggle, you'll define the create_entry
