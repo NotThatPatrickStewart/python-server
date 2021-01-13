@@ -143,6 +143,9 @@ class HandleRequests(BaseHTTPRequestHandler):
         
         if resource == "employees":
             delete_employee(id)
+        
+        if resource == "locations":
+            delete_location(id)
 
         # Encode the new animal and send in response
         self.wfile.write("".encode())
