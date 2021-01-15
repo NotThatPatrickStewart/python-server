@@ -58,10 +58,9 @@ INSERT INTO `Animal` VALUES (null, "Doodles", "Kennel", "Poodle", 3, 1);
 INSERT INTO `Animal` VALUES (null, "Daps", "Kennel", "Boxer", 2, 2);
 
 SELECT
-		c.id,
-		c.name,
-	 c.address,
-	 c.email,
-		c.password
-FROM customer c
-WHERE c.id = 2
+		e.id,
+		e.name,
+		e.address,
+		e.location_id
+FROM employee e
+WHERE e.id = 2
