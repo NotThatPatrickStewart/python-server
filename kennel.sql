@@ -58,9 +58,8 @@ INSERT INTO `Animal` VALUES (null, "Doodles", "Kennel", "Poodle", 3, 1);
 INSERT INTO `Animal` VALUES (null, "Daps", "Kennel", "Boxer", 2, 2);
 
 SELECT
-		e.id,
-		e.name,
-		e.address,
-		e.location_id
-FROM employee e
-WHERE e.id = 2
+		l.id,
+		l.name,
+		l.address
+FROM location l
+WHERE l.id = 2
