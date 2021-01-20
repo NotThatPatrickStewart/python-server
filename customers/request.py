@@ -72,13 +72,13 @@ def get_customers_by_email(email):
 
         # Write the SQL query to get the information you want
         db_cursor.execute("""
-        select
+        SELECT
             c.id,
             c.name,
             c.address,
             c.email,
             c.password
-        from Customer c
+        from customer c
         WHERE c.email = ?
         """, ( email, ))
 
