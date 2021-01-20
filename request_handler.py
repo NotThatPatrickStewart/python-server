@@ -1,9 +1,26 @@
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from animals import get_all_animals, get_single_animal, create_animal, delete_animal, update_animal
-from locations import get_all_locations, get_single_location, create_location, delete_location, update_location
-from employees import get_all_employees, get_single_employee, create_employee, delete_employee, update_employee
-from customers import get_all_customers, get_single_customer, create_customer, delete_customer, update_customer
+from animals import get_all_animals
+from animals import get_single_animal
+from animals import create_animal
+from animals import delete_animal
+from animals import update_animal
+from locations import get_all_locations
+from locations import get_single_location
+from locations import create_location
+from locations import delete_location
+from locations import update_location
+from employees import get_all_employees
+from employees import get_single_employee
+from employees import create_employee
+from employees import delete_employee
+from employees import update_employee
+from customers import get_all_customers
+from customers import get_single_customer
+from customers import create_customer
+from customers import delete_customer
+from customers import update_customer
+from customers import get_customers_by_email
 
 # Here's a class. It inherits from another class.
 
