@@ -1,3 +1,4 @@
+from employees.request import get_employees_by_location
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from animals import get_all_animals
@@ -16,6 +17,7 @@ from employees import get_single_employee
 from employees import create_employee
 from employees import delete_employee
 from employees import update_employee
+from employees import get_employees_by_location
 from customers import get_all_customers
 from customers import get_single_customer
 from customers import create_customer
@@ -121,6 +123,8 @@ class HandleRequests(BaseHTTPRequestHandler):
                 response = get_customers_by_email(value)
             if key == "location_id" and resource == "animals":
                 response = get_animals_by_location(value)
+            if key == "location_id" and resource == "employees":
+                response = get_employees_by_location(value)
 
         self.wfile.write(response.encode())
 
