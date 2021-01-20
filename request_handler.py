@@ -118,6 +118,8 @@ class HandleRequests(BaseHTTPRequestHandler):
             # email as a filtering value?
             if key == "email" and resource == "customers":
                 response = get_customers_by_email(value)
+            if key == "location" and resource == "aniamls":
+                response = get_animals_by_location(value)
 
         self.wfile.write(response.encode())
 
