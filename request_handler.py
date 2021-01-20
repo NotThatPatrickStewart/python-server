@@ -5,6 +5,7 @@ from animals import get_single_animal
 from animals import create_animal
 from animals import delete_animal
 from animals import update_animal
+from animals import get_animals_by_location
 from locations import get_all_locations
 from locations import get_single_location
 from locations import create_location
