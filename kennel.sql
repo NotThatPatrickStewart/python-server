@@ -57,15 +57,14 @@ INSERT INTO `Animal` VALUES (null, "Falafel", "Treatment", "Siamese", 4, 2);
 INSERT INTO `Animal` VALUES (null, "Doodles", "Kennel", "Poodle", 3, 1);
 INSERT INTO `Animal` VALUES (null, "Daps", "Kennel", "Boxer", 2, 2);
 
- SELECT
-	a.id,
-	a.name,
-	a.breed,
-	a.status,
-	a.location_id,
-	a.customer_id,
+SELECT
+	e.id,
+	e.name,
+	e.address,
+	e.location_id,
+	l.id location_id,
 	l.name location_name,
 	l.address location_address
-FROM animal a
-JOIN Location l
-	ON l.id = a.location_id
+FROM employee e
+JOIN location l
+	ON l.id = e.location_id
