@@ -1,31 +1,11 @@
-from animals.request import get_animals_by_status
 from employees.request import get_employees_by_location
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from animals import get_all_animals
-from animals import get_single_animal
-from animals import create_animal
-from animals import delete_animal
-from animals import update_animal
-from animals import get_animals_by_location
-from animals import get_animals_by_status
-from locations import get_all_locations
-from locations import get_single_location
-from locations import create_location
-from locations import delete_location
-from locations import update_location
-from employees import get_all_employees
-from employees import get_single_employee
-from employees import create_employee
-from employees import delete_employee
-from employees import update_employee
-from employees import get_employees_by_location
-from customers import get_all_customers
-from customers import get_single_customer
-from customers import create_customer
-from customers import delete_customer
-from customers import update_customer
-from customers import get_customers_by_email
+from locations.request import get_all_locations
+from animals import *
+from customers import *
+from locations import *
+from employees import *
 
 # Here's a class. It inherits from another class.
 
@@ -106,11 +86,22 @@ class HandleRequests(BaseHTTPRequestHandler):
                     response = f"{get_single_animal(id)}"
                 else:
                     response = f"{get_all_animals()}"
+            elif resource == "locations":
+                if id is not None:
+                    response = f"{get_single_animal(id)}"
+                    pass
+                else:
+                    response = f"{get_all_locations()}"
             elif resource == "customers":
                 if id is not None:
                     response = f"{get_single_customer(id)}"
                 else:
                     response = f"{get_all_customers()}"
+            elif resource == "employees":
+                if id is not None:
+                    response = f"{get_single_employee(id)}"
+                else:
+                    response = f"{get_all_employees()}"
 
         # Response from parse_url() is a tuple with 3
         # items in it, which means the request was for
